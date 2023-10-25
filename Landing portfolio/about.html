@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 229, 251);
+        }
+
+        hr {
+            margin-left: 5%;
+            height: 5px;
+            background-color: cadetblue;
+            width: 90%;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            font-family: sans-serif;
+            background-image: url(/1.jpg);
+            background-repeat: no-repeat;
+        }
+
+        .name h1 {
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            font-size: 2.5em;
+        }
+
+        .name {
+            animation: name 4s linear infinite;
+            color: red;
+            font-family: sans-serif;
+        }
+
+        @keyframes name {
+            70% {
+                opacity: 0;
+            }
+        }
+
+        nav {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .link a {
+            text-decoration: none;
+            color: aqua;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .link a {
+            font-size: 1.3em;
+        }
+
+        .link a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            border-bottom: 3px solid blue;
+            transition: 0.2s linear;
+        }
+
+        .link a:hover:before {
+            width: 90%;
+        }
+
+        .login a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+            background-color: red;
+            border-radius: 20px;
+            font-size: 1.2em;
+        }
+
+        .login a:hover {
+            background-color: white;
+            border: 3px solid aqua;
+        }
+
+        .main {
+            height: 70%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .left {
+            margin-top: 35px;
+            margin-left: -150px;
+        }
+
+        .left h1:hover {
+            color: darkorange;
+        }
+
+        .right {
+            margin-top: 30px;
+        }
+
+        .right img:hover {
+            box-shadow: 0 0 20px 10px rgba(253, 2, 2, 0.5);
+            border-radius: 5px;
+        }
+
+        .main h1 {
+            font-size: 3em;
+        }
+
+        .main a {
+            text-decoration: none;
+            background-color: aqua;
+            padding: 10px 20px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+        }
+
+        .main a:hover {
+            background-color: white;
+            border: 3px solid red;
+        }
+
+        .main h1 {
+            color: cadetblue;
+        }
+
+        .main span {
+            font-size: 1.6em;
+            color: darkmagenta;
+        }
+
+        .main p {
+            font-size: 1.2em;
+            color: blue;
+        }
+
+        .progress {
+            margin-left: 200px;
+            position: relative;
+            display: inline-block;
+            width: 0.4%;
+            height: 350px;
+            -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+        }
+
+        .progress {
+            box-shadow: inset 10px 14px 16px orangered;
+        }
+
+        .progressbar {
+            box-shadow: inset 10px 14px 16px rgba(100, 100, 100, 0.6);
+        }
+
+        .progress:hover {
+            border: 3px solid aqua;
+        }
+
+        .about {
+            display: flex;
+            font-size: 1.5em;
+            justify-content: space-around;
+            background-image: url(/skill2.jpg);
+            color: white;
+        }
+
+        .abb {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .abb h1:hover {
+            color: red;
+        }
+
+        .abb p:hover {
+            color: aqua;
+        }
+
+        .abc {
+            margin-top: 20px;
+        }
+
+        .skill {
+            font-size: 1.6em;
+            display: flex;
+            justify-content: space-around;
+            height: 460px;
+        }
+
+        .pro {
+            font-size: 1.3em;
+            display: flex;
+            justify-content: space-around;
+            color: white;
+        }
+
+        .skilla {
+            text-align: center;
+        }
+
+        .proa {
+            text-align: center;
+        }
+
+        .section {
+            display: flex;
+            height: 450px;
+            width: 100%;
+            justify-content: space-evenly;
+            font-size: 4.5vh;
+            background-image: url(/port4.jpg);
+        }
+
+        .x {
+            padding-top: 20px;
+            height: 350px;
+            width: 30%;
+            border: 2px solid black;
+            border-radius: 30px;
+            background-color: lightblue;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .x:hover {
+            box-shadow: 0 0 20px 10px rgba(0, 140, 186, 0.5);
+        }
+
+        .y {
+            padding-top: 20px;
+            height: 350px;
+            width: 30%;
+            border: 2px solid black;
+            border-radius: 30px;
+            text-align: center;
+            background-color: lightpink;
+            margin-top: 60px;
+        }
+
+        .y:hover {
+            box-shadow: 0 0 20px 10px rgba(0, 140, 186, 0.5);
+        }
+
+        .z {
+            padding-top: 20px;
+            height: 350px;
+            width: 30%;
+            border: 2px solid black;
+            border-radius: 30px;
+            text-align: center;
+            background-color: lightgreen;
+            margin-top: 60px;
+        }
+
+        .z:hover {
+            box-shadow: 0 0 20px 10px rgba(0, 140, 186, 0.5);
+        }
+
+        .x h3:hover,
+        .y h3:hover,
+        .z h3:hover {
+            color: red;
+        }
+
+        #sec {
+            list-style-type: none;
+        }
+
+        dt {
+            font-style: italic;
+            color: red;
+            font-size: 1.35em;
+            font-weight: 900;
+        }
+
+        .skill {
+            background-image: url(/skill8.jpg);
+            color: white;
+        }
+
+        .skill h1:hover {
+            color: red;
+        }
+
+        .skill p:hover {
+            color: aqua;
+        }
+
+        .proa {
+            font-size: 1.3em;
+        }
+
+        .pro {
+            background-image: url(/pro.jpg);
+        }
+
+        .proa h1:hover {
+            color: red;
+        }
+
+        .proa li:hover {
+            border-bottom: 2px solid red;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.5em;
+            color: aqua;
+            background-color: black;
+
+        }
+
+        .foa,
+        .fob,
+        .foc {
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .foa img {
+            height: 28%;
+            width: 28%;
+        }
+
+        .fob img {
+            height: 20%;
+            width: 20%;
+        }
+
+        .foc img {
+            height: 15%;
+            width: 15%;
+        }
+
+        .foa li,
+        .fob li,
+        .foc li {
+            list-style-type: none;
+        }
+
+        .foa li:hover,
+        .fob li:hover,
+        .foc li:hover {
+            box-shadow: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="name">
+                <h1><span style="color: lightgreen;">Ashwani</span>
+                    <span style="color: skyblue;">Landing</span>
+                    <span style="color: lightpink;">Page</span>
+                </h1>
+            </div>
+            <div class="link">
+                <a href="/home.html">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/skill.html">Skills</a>
+                <a href="/ach.html">Achievements</a>
+                <a href="/cont.html">Projects</a>
+            </div>
+            <div class="login">
+                <a href="#">Connect</a>
+            </div>
+        </nav>
+        <br>
+        <hr>
+        <br>
+        <section class="main">
+            <div class="progress">
+                <div class="progressbar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                    style="width:40%"></div>
+            </div>
+            <div class="left">
+                <p>I'm a</p>
+                <h1> Web Developer</h1>
+                <span>Intern</span>
+                <h1>Software Developer</h1>
+                <p>and a</p>
+                <h1>Technical Blogger.</h1>
+                <br>
+                <a href="#">Download CV</a>
+            </div>
+            <div class="right">
+                <img src="/mine.jpeg" alt="Ashwani" height="300px" width="300px" style="border-radius: 50px;">
+            </div>
+        </section>
+    </header>
+    <hr>
+
+
+    <div class="about">
+        <div class="abb">
+            <h1 style="text-decoration: underline;">* About Me *</h1>
+            <br>
+            <p>My name is <span>Ashwani</span>.</p>
+            <p>Basically, I am from Alwar district in Rajasthan.</p>
+            <p>Currently, I am pursuing in <span>MCA final year</span>.</p>
+            <p>I have Skillset in <span>Web Development.</span></p>
+            <p>I have done some <span>Projects</span> in Web Development. </p>
+            <p>Also, I have done <span>Certifications</span> in Web.</p>
+            <p>I also have an <span>Entry Level Experience</span>to work with an organization.</p>
+        </div>
+        <div class="abc">
+            <img src="/ach.jpg" alt="" height="320px" width="480px">
+        </div>
+    </div>
+    <hr>
+    <div class="section">
+        <div class="x" style="background-color: lightblue;">
+            <h3 style="text-decoration: underline;">Internships</h3>
+            <br>
+            <ol id="sec">
+                <li>Bharat Intern</li>
+                <li>Code Alpha</li>
+                <li>Oasis Infobyte</li>
+                <li>CodSoft</li>
+                <li>Looking More.... </li>
+            </ol>
+        </div>
+        <div class="y" style="background-color: lightpink;">
+            <h3 style="text-decoration: underline;">Achievements</h3>
+            <br>
+            <ol id="sec">
+                <li>Skill Set</li>
+                <li>Internships</li>
+                <li>Projects</li>
+                <li>Certifications</li>
+                <li>Web Development</li>
+            </ol>
+        </div>
+        <div class="z" style="background-color: lightgreen; ">
+            <h3 style="text-decoration: underline;">Projects</h3>
+            <br>
+            <ol id="sec">
+                <li>Netflix Clone</li>
+                <li>Landing Page</li>
+                <li>Portfolio Website</li>
+                <li>E-Commerce Website</li>
+                <li>Technical Blog Website</li>
+            </ol>
+        </div>
+    </div>
+    <hr>
+    <div class="skill">
+        <div class="skillb"><img src="/ach2.webp" alt="" height="300px" width="300px"
+                style="border: 5px solid yellow;margin-top: 70px;">
+        </div>
+        <div class="skilla">
+            <h1 style="text-decoration: underline;margin-top: 20px;">* Area of Expertise *</h1>
+            <br>
+            <dl>
+                <dt>FrontEnd</dt>
+                <dd>* The development of the graphical user interface of a website, <br> Through the use of HTML, CSS,
+                    and JavaScript.
+                </dd>
+                <br>
+                <dt>MongoDB</dt>
+                <dd>* For Storing and Collecting the data.</dd>
+                <br>
+                <dt>NodeJS</dt>
+                <dd>* For Backend Programming to manipulate, create, delete and update data.</dd>
+            </dl>
+        </div>
+    </div>
+    <hr>
+    <div class="pro">
+        <div class="proa">
+            <h1 style="text-decoration: underline;margin-top: 20px;">
+                * Achievements *
+            </h1> <br>
+            <ul>
+                <li>Projects</li>
+                <li>Certifications</li>
+
+                <li>Virtual Internships</li>
+                <li>Attended Interviews</li>
+                <li>Web Development Training</li>
+            </ul>
+        </div>
+        <div class="proc">
+            <img src="/pro2.jpg" height="300px" width="300px" alt="Portfolio"
+                style="border: 5px solid yellow; margin-left: -130px;margin-top: 30px;">
+        </div>
+    </div>
+    <hr>
+    <div class="footer">
+        <div class="foa">
+            <ol>
+                <li><img src="/f1.jfif" alt=""></li><br>
+                <li><img src="/f2.jfif" alt=""></li><br>
+                <li>By Ashwani</li>
+            </ol>
+        </div>
+        <div class="fob">
+            <ol>
+                <li><img src="f3.png" alt=""></li><br>
+                <li><img src="f4.png" alt=""></li><br>
+                <li>Copyright @2023</li>
+
+            </ol>
+        </div>
+        <div class="foc">
+            <ol>
+                <li><img src="f5.png" alt=""></li><br>
+                <li><img src="f6.png" alt=""></li><br>
+                <li>All Copyrights Reserved</li>
+
+            </ol>
+        </div>
+    </div>
+    <hr>
+</body>
+
+</html>
